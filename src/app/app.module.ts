@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,9 @@ import { MyHeaderComponent } from './my-header/my-header.component';
 import { TabellaClientiComponent } from './tabella-clienti/tabella-clienti.component';
 import { DettaglioClientiComponent } from './dettaglio-clienti/dettaglio-clienti.component';
 import { FormClientiComponent } from './form-clienti/form-clienti.component';
+import { LoginComponent } from './login/login.component';
+import { ClientiComponent } from './clienti/clienti.component';
+import { MyHttpInterceptorInterceptor } from './my-http-interceptor.interceptor';
 
 @NgModule({
   declarations: [
@@ -15,14 +19,22 @@ import { FormClientiComponent } from './form-clienti/form-clienti.component';
     MyHeaderComponent,
     TabellaClientiComponent,
     DettaglioClientiComponent,
-    FormClientiComponent
+    FormClientiComponent,
+    LoginComponent,
+    ClientiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS,
+    useClass: MyHttpInterceptorInterceptor,
+  multi:true
+}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

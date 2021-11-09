@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ICliente } from '../Interfaccia/icliente';
+import { ClientiService } from '../services/cliente.service';
 
 @Component({
   selector: 'app-form-clienti',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormClientiComponent implements OnInit {
 
-  constructor() { }
+  editClienti!:  ICliente ;
+
+  constructor(private ClientiService:ClientiService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(element => {
+      if (element.id){
+        this.ClientiService.getClienti(element.id).subscribe(response => this.editClienti= response);
+}
+  })
   }
-
 }

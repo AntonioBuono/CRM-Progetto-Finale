@@ -12,6 +12,7 @@ import { FormClientiComponent } from './form-clienti/form-clienti.component';
 import { LoginComponent } from './login/login.component';
 import { ClientiComponent } from './clienti/clienti.component';
 import { MyHttpInterceptorInterceptor } from './my-http-interceptor.interceptor';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { MyHttpInterceptorInterceptor } from './my-http-interceptor.interceptor'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     NgbModule
   ],
   providers: [

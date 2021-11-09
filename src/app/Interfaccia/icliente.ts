@@ -1,4 +1,5 @@
 export interface ICliente {
+
     id: 1,
     ragioneSociale: string,
         partitaIva:string,
@@ -10,6 +11,7 @@ telefono: string,
         cognomeContatto:string,
             telefonoContatto: string,
                 emailContatto: string,
+    
 indirizzoSedeOperativa: {
     id: 2,
         via: string,

@@ -1,22 +1,27 @@
 <div class="container my-5">
+    <h1 class="container d-flex justify-content-center my-2">Tabella Clienti</h1>
 <table class="table table-striped">
     <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Country</th>
-      <th scope="col">Area</th>
-      <th scope="col">Population</th>
+      <th scope="col">Ragione Sociale</th>
+      <th scope="col">Part. Iva</th>
+      <th scope="col">Tipo CLiente</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telefono</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let country of countries; index as i">
-      <th scope="row">{{ i + 1 }}</th>
-      <td>
-        <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="mr-2" style="width: 20px">
-        {{ country.name }}
-      </td>
-      <td>{{ country.area | number }}</td>
-      <td>{{ country.population | number }}</td>
+      <tr *ngFor="let item of clienti.content; index as i">
+      <td scope="row">{{i + 1}}</td>
+      <td>{{item.ragioneSociale}}</td>
+      <td>{{item.partitaIva}}</td>
+      <td>{{item.tipoCliente}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.telefono}}</td>
+      <button type="button" class="btn btn-danger btn-sm my-2 mx-1" (click)="deleteCliente(item)"><i class="bi bi-trash2-fill "></i></button>
+      <button type="button" class="btn btn-warning btn-sm my-2 mx-1" (click)="selectCliente(item)"><i class="bi bi-pencil-square"></i></button>
+      <button type="button" class="btn btn-primary btn-sm my-2 mx-1" (click)="detailCliente(item)"><i class="bi bi-info-square"></i></button>
     </tr>
     </tbody>
   </table>

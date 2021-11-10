@@ -22,6 +22,9 @@ export class ClientiService {
   getClienti(id:number){
     return this.http.get<ICliente>(environment.urlAPI+'api/clienti/' + id);
   }
+  updateClienti(clienti:ICliente){
+    return this.http.put<ICliente>(environment.urlAPI+ 'api/clienti/'+ clienti.id, clienti);
+  }
   removeClienti(clienti:ICliente){
     return this.http.delete(this.urlAPI + clienti.id);
   }

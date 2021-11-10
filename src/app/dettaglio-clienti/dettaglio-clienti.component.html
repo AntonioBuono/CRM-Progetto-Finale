@@ -1,103 +1,80 @@
-<div class="container-md my-5">
-    <h1 class="d-flex flex-row justify-content-center bg-primary text-white">Dati Cliente {{detailClienti.nomeContatto}} {{detailClienti.cognomeContatto}}</h1>
-    <form class="row g-3 my-5 bg-light">
-        <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Nome</label>
-            <input type="nome" [(ngModel)]="detailClienti.ragioneSociale"  class="form-control">
-        </div>
-        <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Cognome</label>
-            <input type="cognome" class="form-control">
-        </div>
-        <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Ragione Sociale</label>
-            <input type="nome" class="form-control">
-        </div>
-        <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Partita Iva</label>
-            <input type="cognome" class="form-control">
-        </div>
-        <div class="col-12">
-            <label for="inputAddress" class="form-label">Email</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="col-12">
-            <label for="inputAddress" class="form-label">PEC</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="col-12">
-            <label for="inputAddress" class="form-label">Telefono</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="col-12">
-            <h1 class="d-flex justify-content-center bg-primary text-white">Recapiti Contatto</h1>
-        </div>
-        <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Email</label>
-            <input type="cognome" class="form-control">
-        </div>
-        <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Telefono</label>
-            <input type="nome" class="form-control">
-        </div>
-        <div class="col-12 my-3">
-            <h1 class="d-flex justify-content-center bg-primary text-white">Indirizzo Sede Operativa</h1>
-        </div>
-        <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Via</label>
-            <input type="cognome" class="form-control">
-        </div>
-        <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Civico</label>
-            <input type="nome" class="form-control">
-        </div>
-        <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Cap</label>
-            <input type="cognome" class="form-control">
-        </div>
-        <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Località</label>
-            <input type="nome" class="form-control">
-        </div>
-        <div class="col-12">
-            <label for="inputAddress" class="form-label">Comune</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="col-12 my-3">
-            <h1 class="d-flex justify-content-center bg-primary text-white">Indirizzo Sede Legale</h1>
-        </div>
-        <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Via</label>
-            <input type="cognome" class="form-control">
-        </div>
-        <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Civico</label>
-            <input type="nome" class="form-control">
-        </div>
-        <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Cap</label>
-            <input type="cognome" class="form-control">
-        </div>
-        <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Località</label>
-            <input type="nome" class="form-control">
-        </div>
-        <div class="col-12">
-            <label for="inputAddress" class="form-label">Comune</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="col-12 my-3">
-            <h1 class="d-flex justify-content-center bg-primary text-white">Data:</h1>
-        </div>
-        <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Data Inserimento</label>
-            <input type="cognome" class="form-control">
-        </div>
-        <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Data Ultimo Contatto</label>
-            <input type="nome" class="form-control">
-        </div>
-        <div class="col-12">
-            <label for="inputAddress" class="form-label">Fattura Annuale</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
+<div class="container my-5">
+<table class="table table-bordered bg-light">
+    <thead>
+      <tr>
+        <th scope="col" colspan="4" class="text-center display-5 my-3"><b>Dati Cliente</b></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Ragione Sociale:</th>
+        <td>{{detailClienti.ragioneSociale}}</td>
+        <th scope="row">Partita Iva:</th>
+        <td>{{detailClienti.partitaIva}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Tipo Cliente:</th>
+        <td>{{detailClienti.tipoCliente}}</td>
+        <th scope="row">Email:</th>
+        <td>{{detailClienti.email}}</td>
+    </tr>
+    <tr>
+        <th scope="row">Pec:</th>
+        <td>{{detailClienti.pec}}</td>
+        <th scope="row">Telefono:</th>
+        <td>{{detailClienti.telefono}}</td>
+    </tr>
+    <tr>
+        <th scope="row">Data Inserimento:</th>
+        <td>{{detailClienti.dataInserimento}}</td>
+        <th scope="row">Data Ultimo Contatto:</th>
+        <td>{{detailClienti.dataUltimoContatto}}</td>
+    </tr>
+    <tr>
+        <th scope="row">Fatturato Annuale:</th>
+        <td>{{detailClienti.fatturatoAnnuale}}</td>
+        <th scope="row"></th>
+        <td></td>
+    </tr>
+    <th scope="col" colspan="4" class="text-center display-5 my-3"><b>Dati Contatto</b></th>
+    <tr>
+        <th scope="row">Nome:</th>
+        <td>{{detailClienti.nomeContatto}}</td>
+        <th scope="row">Cognome:</th>
+        <td>{{detailClienti.cognomeContatto}}</td>
+    </tr>
+    <tr>
+        <th scope="row">Telefono:</th>
+        <td>{{detailClienti.telefonoContatto}}</td>
+        <th scope="row">Email:</th>
+        <td>{{detailClienti.emailContatto}}</td>
+    </tr>
+    <th scope="col" colspan="4" class="text-center display-5 my-3"><b>Indirizzo Sede Operativa</b></th>
+    <tr>
+        <th scope="row">Via:</th>
+        <td>{{detailClienti.indirizzoSedeOperativa.via}}</td>
+        <th scope="row">Civico:</th>
+        <td>{{detailClienti.indirizzoSedeOperativa.civico}}</td>
+        </tr>
+        <tr>
+        <th scope="row">Cap:</th>
+        <td>{{detailClienti.indirizzoSedeOperativa.cap}}</td>
+        <th scope="row">Località:</th>
+        <td>{{detailClienti.indirizzoSedeOperativa.localita}}</td>
+    </tr>
+    <th scope="col" colspan="4" class="text-center display-5 my-3"><b>Indirizzo Sede Legale</b></th>
+    <tr>
+        <th scope="row">Via:</th>
+        <td>{{detailClienti.indirizzoSedeLegale.via}}</td>
+        <th scope="row">Civico:</th>
+        <td>{{detailClienti.indirizzoSedeLegale.civico}}</td>
+        </tr>
+        <tr>
+        <th scope="row">Cap:</th>
+        <td>{{detailClienti.indirizzoSedeLegale.cap}}</td>
+        <th scope="row">Località:</th>
+        <td>{{detailClienti.indirizzoSedeLegale.localita}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

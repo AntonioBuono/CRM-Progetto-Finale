@@ -13,6 +13,8 @@ import { LoginComponent } from './login/login.component';
 import { ClientiComponent } from './clienti/clienti.component';
 import { MyHttpInterceptorInterceptor } from './my-http-interceptor.interceptor';
 import { FormsModule } from '@angular/forms';
+import { MyFooterComponent } from './my-footer/my-footer.component';
+import { NuovoClienteComponent } from './nuovo-cliente/nuovo-cliente.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FormsModule } from '@angular/forms';
     DettaglioClientiComponent,
     FormClientiComponent,
     LoginComponent,
-    ClientiComponent
+    ClientiComponent,
+    MyFooterComponent,
+    NuovoClienteComponent
   ],
   imports: [
     BrowserModule,

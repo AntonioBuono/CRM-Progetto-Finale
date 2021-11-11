@@ -14,7 +14,7 @@ import { ClientiComponent } from './clienti/clienti.component';
 import { MyHttpInterceptorInterceptor } from './my-http-interceptor.interceptor';
 import { FormsModule } from '@angular/forms';
 import { MyFooterComponent } from './my-footer/my-footer.component';
-import { NuovoClienteComponent } from './nuovo-cliente/nuovo-cliente.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +26,6 @@ import { NuovoClienteComponent } from './nuovo-cliente/nuovo-cliente.component';
     LoginComponent,
     ClientiComponent,
     MyFooterComponent,
-    NuovoClienteComponent
   ],
   imports: [
     BrowserModule,

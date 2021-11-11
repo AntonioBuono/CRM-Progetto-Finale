@@ -1,5 +1,5 @@
 <div class="container-md my-5">
-    <h1 class="d-flex flex-row justify-content-center bg-primary text-white">Dati Cliente {{editClienti.nomeContatto}} {{editClienti.cognomeContatto}}</h1>
+    <h1 class="d-flex flex-row justify-content-center bg-primary text-white">{{title}} Cliente {{editClienti.nomeContatto}} {{editClienti.cognomeContatto}}</h1>
     <form class="row g-3 my-5 bg-light">
         <div class="col-md-6">
             <label for="inputEmail4" class="form-label">Nome</label>
@@ -61,7 +61,9 @@
         </div>
         <div class="col-12">
             <label for="inputAddress" class="form-label">Comune</label>
-            <input type="text" name="comune" class="form-control" [(ngModel)]="editClienti.indirizzoSedeOperativa.comune.nome">
+            <select  class="form-control" [(ngModel)]="editClienti.indirizzoSedeOperativa.comune">
+                <option [ngValue]="item" *ngFor="let item of comuni">{{item}}</option>
+                </select>
         </div>
         <div class="col-12 my-3">
             <h1 class="d-flex justify-content-center bg-primary text-white">Indirizzo Sede Legale</h1>
@@ -84,7 +86,9 @@
         </div>
         <div class="col-12">
             <label for="inputAddress" class="form-label">Comune</label>
-            <input type="text" nome="comune" class="form-control" id="inputAddress" placeholder="1234 Main St" [(ngModel)]="editClienti.indirizzoSedeLegale.comune.nome">
+            <select  class="form-control" [(ngModel)]="editClienti.indirizzoSedeLegale.comune">
+                <option [ngValue]="item" *ngFor="let item of comuni">{{item}}</option>
+                </select>
         </div>
         <div class="col-12 my-3">
             <h1 class="d-flex justify-content-center bg-primary text-white">Data:</h1>

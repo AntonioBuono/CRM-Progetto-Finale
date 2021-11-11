@@ -1,6 +1,6 @@
 export interface ICliente {
     
-    id: 1,
+    id?: number,
     ragioneSociale: string,
         partitaIva:string,
             tipoCliente: string,
@@ -12,32 +12,32 @@ telefono: string,
             telefonoContatto: string,
                 emailContatto: string,
 indirizzoSedeOperativa: {
-    id: 2,
+    id?: number,
         via: string,
             civico: string,
                 cap: string,
                     localita: string,
                         comune: {
-        id: 1,
+        id?: number,
             nome: string,
                 provincia: {
-            id: 1,
+            id?: number,
                 nome:string,
                     sigla: string,
         }
     }
 },
 indirizzoSedeLegale: {
-    id: 1,
+    id?: number,
         via: string,
             civico: string,
                 cap: string,
                     localita: string,
                         comune: {
-        id: 1,
+        id?: number,
             nome:string,
                 provincia: {
-            id: 1,
+            id?: number,
                 nome:string,
                     sigla:string,
         }

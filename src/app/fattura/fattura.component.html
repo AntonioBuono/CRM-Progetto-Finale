@@ -1,0 +1,32 @@
+<app-my-header></app-my-header>
+<div class="container my-5">
+    <table class="table table-bordered bg-light">
+        <thead>
+          <tr>
+            <th scope="col" colspan="4" class="text-center display-5 my-3"><b>Fattura</b></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Data:</th>
+            <td>{{detailFatture.data}}</td>
+            <th scope="row">Numero:</th>
+            <td>{{detailFatture.numero}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Anno:</th>
+            <td>{{detailFatture.anno}}</td>
+            <th scope="row">Importo:</th>
+            <td>{{detailFatture.importo}}</td>
+        </tr>
+        <tr>
+            <th scope="col" colspan="4" class="text-center display-5 my-3"><b>Stato Fattura</b></th>
+          </tr>
+        <tr>
+            <th scope="row">Nome:</th>
+            <td>{{detailFatture.stato.nome}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<app-my-footer></app-my-footer>

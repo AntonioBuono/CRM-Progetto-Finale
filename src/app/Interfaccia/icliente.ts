@@ -45,6 +45,5 @@ indirizzoSedeLegale: {
 },
 dataInserimento: string,
     dataUltimoContatto:string,
-        fatturatoAnnuale: string,
 }
 

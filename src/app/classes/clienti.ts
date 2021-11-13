@@ -1,15 +1,15 @@
 export class Clienti {
     id?: number;
-    ragioneSociale!: string;
-        partitaIva!: string;
+    ragioneSociale: string;
+        partitaIva: string;
             tipoCliente!: string;
-                email!: string;
+                email: string;
                 pec!: string;
-telefono!: string;
-    nomeContatto!: string;
-        cognomeContatto!: string;
-            telefonoContatto!: string;
-                emailContatto!: string;
+telefono: string;
+    nomeContatto: string;
+        cognomeContatto: string;
+            telefonoContatto: string;
+                emailContatto: string;
                 indirizzoSedeOperativa!: {
                     id?: number;
                     via: string;
@@ -42,9 +42,9 @@ indirizzoSedeLegale!: {
         };
     };
 };
-dataInserimento!: string;
-    dataUltimoContatto!: string;
-        fatturatoAnnuale!: string;
+dataInserimento: string;
+    dataUltimoContatto: string;
+        fatturatoAnnuale: string
         constructor()
         {
 this.ragioneSociale="",
@@ -76,8 +76,8 @@ this.indirizzoSedeLegale.comune.nome="",
 this.indirizzoSedeLegale.comune.provincia.id=0,
 this.indirizzoSedeLegale.comune.provincia.nome="",
 this.indirizzoSedeLegale.comune.provincia.sigla="",
-this.dataInserimento="",
-this.dataUltimoContatto="",
+this.dataInserimento="2019-06-01T08:11:01.911+00:00",
+this.dataUltimoContatto="2021-03-24T21:32:06.375+00:00",
 this.fatturatoAnnuale=""         
 
 

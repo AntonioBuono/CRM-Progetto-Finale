@@ -1,13 +1,13 @@
-export interface IComuni {
-    
-        content: 
-            {
-                id: 1,
-                nome: number,
-                provincia: {
-                    id: number,
-                    nome: string,
-                    sigla: string
-                }
-            },
+export interface Comune {
+    content: comune[];  
+}
+
+export interface comune {
+    id: number,
+    nome: string,
+    provincia: {
+        id: number,
+        nome: string,
+        sigla: string
+    } 
 }

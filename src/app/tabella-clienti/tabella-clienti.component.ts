@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ICliente } from '../Interfaccia/icliente';
 import { ClientiService} from './../services/cliente.service';
+import { IFatture } from '../Interfaccia/ifatture';
 
 
 
@@ -15,7 +16,7 @@ import { ClientiService} from './../services/cliente.service';
 export class TabellaClientiComponent implements OnInit {
 
 clienti!: Content ;
-item!:ICliente;
+
 
   constructor(private ClientiService: ClientiService, private router:Router) { }
 
@@ -34,5 +35,7 @@ detailCliente(item:ICliente){
 selectCliente(item:ICliente){
   this.router.navigate(['clienti', item.id , 'edit'])
 }
-  
+detailFatture(item:ICliente){
+  this.router.navigate(['fatture', item.id , 'detail'])
+}
 }

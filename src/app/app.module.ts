@@ -14,6 +14,8 @@ import { ClientiComponent } from './clienti/clienti.component';
 import { MyHttpInterceptorInterceptor } from './my-http-interceptor.interceptor';
 import { FormsModule } from '@angular/forms';
 import { MyFooterComponent } from './my-footer/my-footer.component';
+import { FatturaComponent } from './fattura/fattura.component';
+
 
 
 @NgModule({
@@ -26,6 +28,7 @@ import { MyFooterComponent } from './my-footer/my-footer.component';
     LoginComponent,
     ClientiComponent,
     MyFooterComponent,
+    FatturaComponent,
   ],
   imports: [
     BrowserModule,

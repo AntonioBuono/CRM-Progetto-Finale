@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ProvincieService } from './provincie.service';
+import { RouteGuardService } from './route-guard.service';
 
-describe('ProvincieService', () => {
-  let service: ProvincieService;
+describe('RouteGuardService', () => {
+  let service: RouteGuardService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ProvincieService);
+    service = TestBed.inject(RouteGuardService);
   });
 
   it('should be created', () => {

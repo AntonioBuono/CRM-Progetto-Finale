@@ -1,9 +1,11 @@
+<app-my-header></app-my-header>
 <div class="container-md my-5">
-    <h1 class="d-flex flex-row justify-content-center bg-primary text-white">{{title}} Cliente {{editClienti.nomeContatto}} {{editClienti.cognomeContatto}}</h1>
+    <h1 class="d-flex flex-row justify-content-center bg-primary text-white">{{title}} Cliente
+        {{editClienti.nomeContatto}} {{editClienti.cognomeContatto}}</h1>
     <form class="row g-3 my-5 bg-light">
         <div class="col-md-6">
             <label for="inputEmail4" class="form-label">Nome</label>
-            <input type="text" name="nome" [(ngModel)]="editClienti.nomeContatto"  class="form-control">
+            <input type="text" name="nome" [(ngModel)]="editClienti.nomeContatto" class="form-control">
         </div>
         <div class="col-md-6">
             <label for="inputPassword4" class="form-label">Cognome</label>
@@ -15,19 +17,28 @@
         </div>
         <div class="col-md-6">
             <label for="inputPassword4" class="form-label">Partita Iva</label>
-            <input type="text" name="Partita Iva" [(ngModel)]="editClienti.partitaIva"  class="form-control">
+            <input type="text" name="Partita Iva" [(ngModel)]="editClienti.partitaIva" class="form-control">
         </div>
         <div class="col-12">
             <label for="inputAddress" class="form-label">Email</label>
-            <input type="text" name="email" [(ngModel)]="editClienti.email" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            <input type="text" name="email" [(ngModel)]="editClienti.email" class="form-control" id="inputAddress"
+                placeholder="1234 Main St">
         </div>
         <div class="col-12">
             <label for="inputAddress" class="form-label">PEC</label>
-            <input type="text" name="pec" [(ngModel)]="editClienti.pec" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            <input type="text" name="pec" [(ngModel)]="editClienti.pec" class="form-control" id="inputAddress"
+                placeholder="1234 Main St">
+        </div>
+        <div class="col-12">
+            <label for="inputAddress" class="form-label">Tipo Cliente</label>
+            <select [(ngModel)]="editClienti.tipoCliente" type="text" class="form-control" id="tipoCliente">
+                <option [ngValue]="item" *ngFor="let item of tipicliente">{{item}}</option>
+            </select>
         </div>
         <div class="col-12">
             <label for="inputAddress" class="form-label">Telefono</label>
-            <input type="text" name="telefono" class="form-control" [(ngModel)]="editClienti.telefono" id="inputAddress" placeholder="1234 Main St">
+            <input type="text" name="telefono" class="form-control" [(ngModel)]="editClienti.telefono" id="inputAddress"
+                placeholder="1234 Main St">
         </div>
         <div class="col-12">
             <h1 class="d-flex justify-content-center bg-primary text-white">Recapiti Contatto</h1>
@@ -44,12 +55,13 @@
             <h1 class="d-flex justify-content-center bg-primary text-white">Indirizzo Sede Operativa</h1>
         </div>
         <div class="col-md-6">
-            <label for="inputPassword4" class="form-label" >Via</label>
+            <label for="inputPassword4" class="form-label">Via</label>
             <input type="text" name="via" class="form-control" [(ngModel)]="editClienti.indirizzoSedeOperativa.via">
         </div>
         <div class="col-md-6">
             <label for="inputEmail4" class="form-label">Civico</label>
-            <input type="text" name="civico" class="form-control" [(ngModel)]="editClienti.indirizzoSedeOperativa.civico">
+            <input type="text" name="civico" class="form-control"
+                [(ngModel)]="editClienti.indirizzoSedeOperativa.civico">
         </div>
         <div class="col-md-6">
             <label for="inputPassword4" class="form-label">Cap</label>
@@ -57,12 +69,19 @@
         </div>
         <div class="col-md-6">
             <label for="inputEmail4" class="form-label">Località</label>
-            <input type="text" name="localita" class="form-control" [(ngModel)]="editClienti.indirizzoSedeOperativa.localita">
+            <input type="text" name="localita" class="form-control"
+                [(ngModel)]="editClienti.indirizzoSedeOperativa.localita">
         </div>
         <div class="col-12">
             <label for="inputAddress" class="form-label">Comune</label>
-            <select  class="form-control" [(ngModel)]="editClienti.indirizzoSedeOperativa.comune">
-                <option [ngValue]="item" *ngFor="let item of comuni">{{item}}</option>
+            <select [(ngModel)]="editClienti.indirizzoSedeOperativa.comune" class="form-control"
+                id="sedeoperativacomune">
+                <option [ngValue]="item" *ngFor="let item of comune">{{item.nome}}</option>
+                </select>
+                <label for="inputAddress" class="form-label">Provincia</label>
+                <select [(ngModel)]="editClienti.indirizzoSedeOperativa.comune.provincia" class="form-control"
+                id="sedeoperativaprovince">
+                <option [ngValue]="item" *ngFor="let item of province">{{item.nome}}</option>
                 </select>
         </div>
         <div class="col-12 my-3">
@@ -74,7 +93,7 @@
         </div>
         <div class="col-md-6">
             <label for="inputEmail4" class="form-label">Civico</label>
-            <input type="text" name="civico" class="form-control"[(ngModel)]="editClienti.indirizzoSedeLegale.civico">
+            <input type="text" name="civico" class="form-control" [(ngModel)]="editClienti.indirizzoSedeLegale.civico">
         </div>
         <div class="col-md-6">
             <label for="inputPassword4" class="form-label">Cap</label>
@@ -82,12 +101,19 @@
         </div>
         <div class="col-md-6">
             <label for="inputEmail4" class="form-label">Località</label>
-            <input type="text"  name="localita" class="form-control" [(ngModel)]="editClienti.indirizzoSedeLegale.localita">
+            <input type="text" name="localita" class="form-control"
+                [(ngModel)]="editClienti.indirizzoSedeLegale.localita">
         </div>
         <div class="col-12">
             <label for="inputAddress" class="form-label">Comune</label>
-            <select  class="form-control" [(ngModel)]="editClienti.indirizzoSedeLegale.comune">
-                <option [ngValue]="item" *ngFor="let item of comuni">{{item}}</option>
+            <select [(ngModel)]="editClienti.indirizzoSedeLegale.comune" class="form-control"
+                id="sedeoperativacomune">
+                <option [ngValue]="item" *ngFor="let item of comune">{{item.nome}}</option>
+                </select>
+                <label for="inputAddress" class="form-label">Provincia</label>
+                <select [(ngModel)]="editClienti.indirizzoSedeLegale.comune.provincia" class="form-control"
+                id="sedeoperativaprovince">
+                <option [ngValue]="item" *ngFor="let item of province">{{item.nome}}</option>
                 </select>
         </div>
         <div class="col-12 my-3">
@@ -95,18 +121,14 @@
         </div>
         <div class="col-md-6">
             <label for="inputPassword4" class="form-label">Data Inserimento</label>
-            <input type="text" name="data inserimento" class="form-control"[(ngModel)]="editClienti.dataInserimento">
+            <input type="date" name="data inserimento" class="form-control" [(ngModel)]="editClienti.dataInserimento">
         </div>
         <div class="col-md-6">
             <label for="inputEmail4" class="form-label">Data Ultimo Contatto</label>
-            <input type="text" name="data ultimo contatto" [(ngModel)]="editClienti.dataUltimoContatto">
-        </div>
-        <div class="col-12">
-            <label for="inputAddress" class="form-label">Fatturato Annuale</label>
-            <input type="text" class="form-control" name="fattura annuale" id="inputAddress" placeholder="1234 Main St" [(ngModel)]="editClienti.fatturatoAnnuale">
+            <input type="date" name="data ultimo contatto" [(ngModel)]="editClienti.dataUltimoContatto">
         </div>
         <div class="container d-flex flex-row justify-content-center my-4">
             <button type="submit" class="btn btn-primary " (click)="saveClienti()">Salva Modifiche</button>
         </div>
 
-  
+        <app-my-footer></app-my-footer>
